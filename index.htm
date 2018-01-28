@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Block-Chain</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src=sha256.js></script>
+  <script src=block.js></script>
+
+</head>
+<body>
+  <div class="container" id="container">
+    <center><h1>Kim's Coin</h1></center>
+    <button class="btn btn-dark" id="newBlockButton" style="display:inline-block">Add Block</button>
+    <button class="btn btn-dark" id="isChainValid">Validation Check</button><br><br>
+
+    <div class="d-flex p-2 border border-primary alert alert-secondary" id="BlockChain_1">
+      <div id="transaction_1" style="display:block;">
+        Index: <input type=text name="index" id="index" size="1" onchange="addHash(this);"><br><br>
+        Timestamp: <input type=text name="timestamp" id="timestamp" size="20" onchange="addHash(this);"><br><br>
+        Transaction Data:<br>
+        <textarea name="data_1" rows="8" id="data" cols="40" onchange="addHash(this);"></textarea><br><br>
+      </div>
+      <div id="previousHash_1" style="word-break:break-all; width:100%" class="border border-success"></div>
+      <div id="currentHash_1" style="word-break:break-all; width:100%" class="border border-danger"></div>
+    </div>
+
+    <script src = "blockControl.js"></script>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+</body>
+</html>
